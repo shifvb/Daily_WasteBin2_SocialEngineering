@@ -71,8 +71,24 @@ see ./download/download.txt
         * `19790522`，`1/19577629(0.000%)`，
         * `#0449`，`1/19577629(0.000%)`，
         
-    
-Gender, Birthday, Address, Zip, Dirty, \
+7. `Birthday`字段
+    1. 此列为生日(其实从身份证号里也能得到)
+    2. 数据分布稠密，出现频率为`19942796/20039768(99.516%)`。
+    3. 按年计算生日分布：
+        ![](md_img/birthday_analysis.png)
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+
+
+, Address, Zip, Dirty, \
 District1, District2, District3, District4, District5, \
 District6, FirstNm, LastNm, Duty, Mobile, \
 Tel, Fax, EMail, Nation, Taste, \
