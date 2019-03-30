@@ -19,7 +19,8 @@ def address_filter(line, handled_dict):
         handled_dict["天津市"] += 1
     elif "上海" in line or "奉贤" in line or "浦东" in line or "崇明" in line or "虹口" in line or "松江" in line \
             or "宝山" in line or "徐汇" in line or "漕溪" in line or "陆家浜" in line or "杨浦" in line \
-            or "宋园" in line or "闵行" in line or "嘉定" in line or "长宁" in line or "普陀" in line:
+            or "宋园" in line or "闵行" in line or "嘉定" in line or "长宁" in line or "普陀" in line \
+            or "shanghai" in line:
         handled_dict["上海市"] += 1
     elif "重庆" in line or "长寿" in line or "九龙坡" in line or "永川" in line or "沙坪坝" in line \
             or "巫溪" in line or "巴南" in line or "渝北" in line:
@@ -98,7 +99,7 @@ def address_filter(line, handled_dict):
         handled_dict["甘肃省"] += 1
     elif "青海" in line or "果洛藏族" in line or "西宁" in line:
         handled_dict["青海省"] += 1
-    elif "台湾" in line or "台北" in line or "高雄" in line:
+    elif "台湾" in line or "台北" in line or "高雄" in line or "台灣" in line:
         handled_dict["台湾省"] += 1
     # 5自治区
     elif "蒙古" in line or "呼和浩特" in line or "包头" in line or "内蒙" in line:
@@ -119,7 +120,7 @@ def address_filter(line, handled_dict):
         handled_dict["澳门特别行政区"] += 1
     # extra
     elif "中国" in line or "CHN" in line or "个人" in line or "公司" in line or "城区" in line or "大厦" in line \
-            or "中区" in line:
+            or "中区" in line or "开发区" in line:
         handled_dict["中国其它地区"] += 1
 
     # 国外
