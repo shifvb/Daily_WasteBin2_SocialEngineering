@@ -14,7 +14,7 @@ def address_filter(line, handled_dict):
     if "北京" in line or "海淀区" in line or "朝阳区" in line or "东城区" in line or "大兴区" in line \
             or "丰台区" in line or "通州区" in line or "海滨区" in line:
         handled_dict["北京市"] += 1
-    elif "天津" in line or "东丽区" in line:
+    elif "天津" in line or "东丽区" in line or "tianjin" in line:
         handled_dict["天津市"] += 1
     elif "上海" in line or "奉贤区" in line or "浦东新区" in line or "崇明县" in line  or "虹口区" in line \
             or "宝山区" in line or "徐汇区" in line:
@@ -40,7 +40,8 @@ def address_filter(line, handled_dict):
             or "扬中区" in line or "楚州区" in line or "清浦区" in line or "京口区" in line:
         handled_dict["江苏省"] += 1
     elif "浙江" in line or "杭州" in line or "宁波" in line or "绍兴区" in line or "江东区" in line or "瑞安市" in line \
-            or "越城区" in line or "象山县" in line or "温州市" in line or "上城区" in line or "吴兴区" in line:
+            or "越城区" in line or "象山县" in line or "温州市" in line or "上城区" in line or "吴兴区" in line \
+            or "草塔" in line :
         handled_dict["浙江省"] += 1
     elif "安徽" in line or "黄山" in line or "合肥" in line or "鸠江区" in line or "颖泉区" in line or "迎江区" in line or \
             "淮南市" in line or "太湖县" in line or "安微" in line or "宿州市" in line:
@@ -104,20 +105,30 @@ def address_filter(line, handled_dict):
         handled_dict["中国其它地区"] += 1
 
     # 国外
-    elif "美国" in line:
+    elif "美国" in line or "USA;" in line:
         handled_dict["美国"] += 1
     elif "日本" in line or "JPN" in line:
         handled_dict["日本"] += 1
     elif "澳大利亚" in line or "AUS;" in line:
         handled_dict["澳大利亚"] += 1
-    elif "新加坡" in line or "SGP;" in line:
+    elif "新加坡" in line or "SGP" in line:
         handled_dict["新加坡"] += 1
     elif "韩国" in line or "KOR;" in line:
         handled_dict["韩国"] += 1
-    elif "马来西亚" in line:
+    elif "马来西亚" in line or "MYS;" in line:
         handled_dict["马来西亚"] += 1
     elif "cze" in line:
         handled_dict["捷克共和国"] += 1
+    elif "巴基斯坦" in line:
+        handled_dict["巴基斯坦"] += 1
+    elif "NZL;" in line:
+        handled_dict["新西兰"] += 1
+    elif "CAN;" in line:
+        handled_dict["加拿大"] += 1
+    elif "GBR;" in line:
+        handled_dict["英国"] += 1
+    elif "NOR;" in line:
+        handled_dict["挪威"] += 1
     else:
         return False
     return True
@@ -177,6 +188,11 @@ def main():
         "新加坡": 0,
         "韩国": 0,
         "马来西亚": 0,
+        "巴基斯坦": 0,
+        "新西兰": 0,
+        "加拿大": 0,
+        "英国": 0,
+        "挪威": 0,
     }
     f_out = open(output_path, mode="w", encoding="utf8")
     with open(input_path, mode='r', encoding='utf8') as f:
