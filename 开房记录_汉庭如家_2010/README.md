@@ -59,18 +59,23 @@ see ./download/download.txt
 6.  `Gender`字段
     1. 此列为性别
     2. 数据频率稠密，出现频率为`19577629/20039768(97.694%)`。
-    3. 此字段统计结果：
+    3. 去除不合理数据后，按性别统计(暂只有男/女)结果：
     
         ![](md_img/gender_analysis.png)
         
 7. `Birthday`字段
     1. 此列为生日(其实从身份证号里也能得到)
     2. 数据分布稠密，出现频率为`19942796/20039768(99.516%)`。
-    3. 按年计算生日分布：
+    3. 去除明显不合理数据后，按年计算生日分布：
     
         ![](md_img/birthday_analysis.png)
         
-        
+8. `Address`字段
+    1. 似乎是。。。家庭住址？
+    2. 出现频率为`16641249/20039768(83.041%)`。
+    3. 去除不合理数据后，按省计算地址分布：
+    
+    
         
         
         
@@ -81,7 +86,7 @@ see ./download/download.txt
 
 
 
-, Address, Zip, Dirty, \
+, , Zip, Dirty, \
 District1, District2, District3, District4, District5, \
 District6, FirstNm, LastNm, Duty, Mobile, \
 Tel, Fax, EMail, Nation, Taste, \
