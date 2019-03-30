@@ -19,13 +19,13 @@ def address_filter(line, handled_dict):
     elif "上海" in line or "奉贤区" in line or "浦东新区" in line or "崇明县" in line  or "虹口区" in line \
             or "宝山区" in line or "徐汇区" in line:
         handled_dict["上海市"] += 1
-    elif "重庆" in line or "长寿区" in line:
+    elif "重庆" in line or "长寿区" in line or "九龙坡区" in line:
         handled_dict["重庆市"] += 1
     # 23个省
     elif "河北" in line or "唐山" in line or "石家庄" in line or "裕华区" in line or "桥东区" in line \
             or "桥西区" in line or "辛集区" in line or "开平区" in line or "张家口" in line:
         handled_dict["河北省"] += 1
-    elif "山西" in line or "万柏林区" in line or "太原" in line:
+    elif "山西" in line or "万柏林区" in line or "太原" in line or "小店区" in line:
         handled_dict["山西省"] += 1
     elif "辽宁" in line or "大连" in line or "沈阳" in line or "甘井子区" in line or "立山区" in line or "瓦房店" in line \
             or "沙河口区" in line or "皇姑区" in line:
@@ -35,32 +35,36 @@ def address_filter(line, handled_dict):
     elif "黑龙江" in line or "哈尔滨" in line or "南岗区" in line or "道里区" in line or "鸡西市" in line:
         handled_dict["黑龙江省"] += 1
     elif "江苏" in line or "海门" in line or "南京" in line or "无锡" in line or "苏州" in line or "白下区" in line \
-            or "泉山区" in line or "丹徒区" in line or "沧浪区" in line or "江阴市" in line or "市京市" in line:
+            or "泉山区" in line or "丹徒区" in line or "沧浪区" in line or "江阴市" in line or "市京市" in line \
+            or "京口区" in line or "丹阳区" in line or "扬中" in line or "淮阴区" in line or "清河区" in line \
+            or "扬中区" in line or "楚州区" in line or "清浦区" in line or "京口区" in line:
         handled_dict["江苏省"] += 1
     elif "浙江" in line or "杭州" in line or "宁波" in line or "绍兴区" in line or "江东区" in line or "瑞安市" in line \
             or "越城区" in line or "象山县" in line or "温州市" in line or "上城区" in line or "吴兴区" in line:
         handled_dict["浙江省"] += 1
     elif "安徽" in line or "黄山" in line or "合肥" in line or "鸠江区" in line or "颖泉区" in line or "迎江区" in line or \
-            "淮南市" in line:
+            "淮南市" in line or "太湖县" in line:
         handled_dict["安徽省"] += 1
     elif "福建" in line or "厦门" in line or "莆田" in line or "晋江" in line or "台江区" in line or "长乐区" in line \
             or "泉州市" in line or "福州市" in line:
         handled_dict["福建省"] += 1
-    elif "江西" in line or "南昌" in line or "萍乡市" in line:
+    elif "江西" in line or "南昌" in line or "萍乡市" in line or "临川区" in line:
         handled_dict["江西省"] += 1
     elif "山东" in line or "济南" in line or "青岛" in line or "章丘区" in line or "奎文区" in line or "东营市" in line \
-            or "平阴区" in line or "龙口市" in line or "张店区" in line or "胶南区" in line or "德州市" in line:
+            or "平阴区" in line or "龙口市" in line or "张店区" in line or "胶南区" in line or "德州市" in line \
+            or "莱山区" in line or "海阳区" in line or "坊子区" in line:
         handled_dict["山东省"] += 1
     elif "河南" in line or "郑州" in line or "河市省" in line or "鹤壁市" in line or "洛阳市" in line \
-            or "项城市" in line or "开封市" in line:
+            or "项城市" in line or "开封市" in line or "商城县" in line:
         handled_dict["河南省"] += 1
-    elif "湖北" in line or "武汉" in line or "洪山区" in line:
+    elif "湖北" in line or "武汉" in line or "洪山区" in line or "夷陵区" in line or "西陵区" in line:
         handled_dict["湖北省"] += 1
     elif "湖南" in line or "长沙" in line or "湖市省" in line or "湘潭市" in line or "怀化市" in line \
             or "株洲市" in line:
         handled_dict["湖南省"] += 1
     elif "广东" in line or "广州" in line or "深圳" in line or "顺德区" in line or "万江区" in line or "萝岗区" in line \
-            or "凤岗镇" in line or "黄浦" in line or "南山区" in line or "海珠区" in line:
+            or "凤岗镇" in line or "黄浦" in line or "南山区" in line or "海珠区" in line or "虎门区" in line \
+            or "高埗区" in line:
         handled_dict["广东省"] += 1
     elif "海南" in line or "海口" in line or "海市" in line:
         handled_dict["海南省"] += 1
@@ -70,7 +74,7 @@ def address_filter(line, handled_dict):
         handled_dict["贵州省"] += 1
     elif "云南" in line:
         handled_dict["云南省"] += 1
-    elif "陕西" in line or "西安" in line or "莲湖区" in line:
+    elif "陕西" in line or "西安" in line or "莲湖区" in line or "秦都区" in line:
         handled_dict["陕西省"] += 1
     elif "甘肃" in line or "兰州" in line or "玉门" in line:
         handled_dict["甘肃省"] += 1
