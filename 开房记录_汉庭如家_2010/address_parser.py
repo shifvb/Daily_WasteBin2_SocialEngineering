@@ -30,15 +30,16 @@ def address_filter(line, handled_dict):
     elif "河北" in line or "唐山" in line or "石家庄" in line or "裕华" in line or "桥东" in line or "新华" in line \
             or "桥西" in line or "辛集" in line or "开平" in line or "张家口" in line or "华龙" in line or "武安" in line \
             or "正定" in line or "涞源" in line or "秦皇岛" in line or "衡水" in line or "邢台" in line or "高碑" in line \
-            or "遵化" in line or "邯郸" in line or "邯郸" in line:
+            or "遵化" in line or "邯郸" in line or "邯郸" in line or "承德" in line:
         handled_dict["河北省"] += 1
     elif "山西" in line or "万柏林" in line or "太原" in line or "小店" in line or "平鲁" in line or "高平" in line \
-            or "清徐" in line or "吕梁" in line or "阳泉" in line:
+            or "清徐" in line or "吕梁" in line or "阳泉" in line or "大同" in line or "朔州" in line or "临汾" in line:
         handled_dict["山西省"] += 1
     elif "辽宁" in line or "大连" in line or "沈阳" in line or "甘井子" in line or "立山" in line or "瓦房店" in line \
             or "沙河口" in line or "皇姑" in line or "大东" in line or "鞍山" in line or "铁西" in line or "连山" in line \
             or "中山区" in line or "盘锦" in line or "和平区" in line or "liaoning" in line or "铁岭" in line or "海城" in line \
-            or "丹东" in line or "辽阳" in line or "锦州" in line or "营口" in line or "抚顺" in line:
+            or "丹东" in line or "辽阳" in line or "锦州" in line or "营口" in line or "抚顺" in line or "阜新" in line \
+            or "葫芦岛" in line:
         handled_dict["辽宁省"] += 1
     elif "吉林" in line or "长春" in line or "南关" in line or "四平" in line or "通化" in line or "jilin" in line:
         handled_dict["吉林省"] += 1
@@ -56,7 +57,8 @@ def address_filter(line, handled_dict):
             or "大丰" in line or "如皋" in line or "连云港" in line or "如皋" in line or "淮安" in line or "姜堰" in line \
             or "昆山" in line or "扬州" in line or "蘇州" in line or "范市" in line or "邳州" in line or "启东" in line \
             or "江蘇" in line or "常熟" in line or "泰州" in line or "兴化" in line or "永康" in line or "太倉" in line \
-            or "wuxi" in line or "江都" in line or "太仓" in line or "句容" in line or "高邮" in line or "仪征" in line:
+            or "wuxi" in line or "江都" in line or "太仓" in line or "句容" in line or "高邮" in line or "仪征" in line \
+            or "泰兴" in line or "鎮江" in line or "金坛" in line or "宿迁" in line or "溧阳" in line:
         handled_dict["江苏省"] += 1
     elif "浙江" in line or "杭州" in line or "宁波" in line or "绍兴" in line or "江东" in line or "瑞安" in line \
             or "越城" in line or "象山" in line or "温州" in line or "上城" in line or "吴兴" in line or "萧山" in line \
@@ -68,14 +70,16 @@ def address_filter(line, handled_dict):
     elif "安徽" in line or "黄山" in line or "合肥" in line or "鸠江" in line or "颖泉" in line or "迎江" in line or \
             "淮南" in line or "太湖县" in line or "安微" in line or "宿州" in line or "芜湖" in line or "繁昌" in line \
             or "马鞍山" in line or "淮北" in line or "蜀山" in line or "当涂" in line or "蚌埠" in line or "庐阳" in line \
-            or "安庆" in line or "铜陵" in line or "明光" in line or "桐城" in line or "巢湖" in line or "天长" in line:
+            or "安庆" in line or "铜陵" in line or "明光" in line or "桐城" in line or "巢湖" in line or "天长" in line \
+            or "滁州" in line or "安慶" in line:
         handled_dict["安徽省"] += 1
     elif "福建" in line or "厦门" in line or "莆田" in line or "晋江" in line or "台江" in line or "长乐" in line \
             or "泉州" in line or "福州" in line or "晋安" in line or "南靖" in line or "仓山" in line or "福清" in line \
-            or "武夷山" in line or "廈門" in line or "xiamen" in line or "石狮" in line or "福鼎" in line or "南平" in line:
+            or "武夷山" in line or "廈門" in line or "xiamen" in line or "石狮" in line or "福鼎" in line or "南平" in line \
+            or "漳州" in line or "福安" in line or "南安" in line:
         handled_dict["福建省"] += 1
     elif "江西" in line or "南昌" in line or "萍乡" in line or "临川" in line or "乐平" in line or "上饶" in line \
-            or "吉安" in line or "景德" in line or "九江" in line or "高安" in line:
+            or "吉安" in line or "景德" in line or "九江" in line or "高安" in line or "赣州" in line:
         handled_dict["江西省"] += 1
     elif "山东" in line or "济南" in line or "青岛" in line or "章丘" in line or "奎文" in line or "东营" in line \
             or "平阴" in line or "龙口" in line or "张店" in line or "胶南" in line or "德州" in line or "安丘" in line \
@@ -84,38 +88,44 @@ def address_filter(line, handled_dict):
             or "長清" in line or "高密" in line or "莒县" in line or "天桥" in line or "历下" in line or "临沂" in line \
             or "烟台" in line or "萊陽" in line or "qingdao" in line or "shandong" in line or "淄博" in line \
             or "枣庄" in line or "滨州" in line or "蓬莱" in line or "临清" in line or "邹城" in line or "济宁" in line \
-            or "锢安" in line:
+            or "锢安" in line or "兖州" in line or "青州" in line or "莱西" in line:
         handled_dict["山东省"] += 1
     elif "河南" in line or "郑州" in line or "河市省" in line or "鹤壁" in line or "洛阳" in line or "伊川" in line \
             or "项城" in line or "开封" in line or "商城县" in line or "何南" in line or "偃师" in line or "唐河" in line \
-            or "罗山" in line or "澶河" in line or "安阳" in line or "三门峡" in line or "平顶山" in line or "登封" in line:
+            or "罗山" in line or "澶河" in line or "安阳" in line or "三门峡" in line or "平顶山" in line or "登封" in line \
+            or "许昌" in line or "周口" in line or "汝州" in line:
         handled_dict["河南省"] += 1
     elif "湖北" in line or "武汉" in line or "洪山" in line or "夷陵" in line or "西陵" in line or "江岸" in line \
             or "猇亭" in line or "鄂州" in line or "武昌" in line or "青山" in line or "伍家" in line or "江汉" in line \
             or "黄陂" in line or "孝南" in line or "郢中" in line or "黄破" in line or "荆门" in line or "宜昌" in line \
-            or "十堰" in line or "利川" in line or "石首" in line or "当阳" in line or "松滋" in line:
+            or "十堰" in line or "利川" in line or "石首" in line or "当阳" in line or "松滋" in line or "仙桃" in line \
+            or "随州" in line:
         handled_dict["湖北省"] += 1
     elif "湖南" in line or "长沙" in line or "湖市省" in line or "湘潭" in line or "怀化" in line or "醴陵" in line \
-            or "株洲" in line or "雨花" in line or "天心" in line or "涟源" in line:
+            or "株洲" in line or "雨花" in line or "天心" in line or "涟源" in line or "益阳" in line:
         handled_dict["湖南省"] += 1
     elif "广东" in line or "广州" in line or "深圳" in line or "顺德" in line or "万江" in line or "萝岗" in line \
             or "凤岗" in line or "黄浦" in line or "南山" in line or "海珠" in line or "虎门" in line or "韶关" in line \
             or "高埗" in line or "厚街" in line or "大朗" in line or "东莞" in line or "沙田" in line or "佛山" in line \
             or "黄埔" in line or "龙岗" in line or "荔湾" in line or "汕头" in line or "广 东" in line or "潮州" in line \
             or "茂名" in line or "廣東" in line or "廣州" in line or "guangdong" in line or "惠州" in line or "清远" in line\
-            or "中山市" in line or "湛江" in line or "江门" in line or "東莞" in line or "Guangdong" in line:
+            or "中山" in line or "湛江" in line or "江门" in line or "東莞" in line or "Guangdong" in line or "肇庆" in line \
+            or "肇庆" in line or "恩平" in line:
         handled_dict["广东省"] += 1
     elif "海南" in line or "海口" in line or "海市" in line or "五指山" in line or "三亚" in line:
         handled_dict["海南省"] += 1
     elif "四川" in line or "成都" in line or "都江堰" in line or "四州省" in line or "南部县" in line or "青羊" in line \
-            or "三台" in line or "金牛" in line or "绵阳" in line:
+            or "三台" in line or "金牛" in line or "绵阳" in line or "广元市" in line or "自贡" in line or "泸州" in line \
+            or "德阳" in line or "资阳" in line:
         handled_dict["四川省"] += 1
-    elif "贵州" in line or "南明" in line or "贵阳" in line or "贵呀" in line or "遵义" in line:
+    elif "贵州" in line or "南明" in line or "贵阳" in line or "贵呀" in line or "遵义" in line or "六盘水" in line \
+            or "铜仁" in line:
         handled_dict["贵州省"] += 1
-    elif "云南" in line or "云市省" in line or "昆明" in line or "西山" in line:
+    elif "云南" in line or "云市省" in line or "昆明" in line or "西山" in line or "大理" in line or "玉溪" in line:
         handled_dict["云南省"] += 1
     elif "陕西" in line or "西安" in line or "莲湖" in line or "秦都" in line or "碑林" in line or "耀州" in line \
-            or "宝鸡" in line or "金台" in line or "凤翔" in line or "xi'an" in line or "榆林" in line or "安康" in line:
+            or "宝鸡" in line or "金台" in line or "凤翔" in line or "xi'an" in line or "榆林" in line or "安康" in line \
+            or "渭南" in line or "延安" in line:
         handled_dict["陕西省"] += 1
     elif "甘肃" in line or "兰州" in line or "玉门" in line or "嘉峪关" in line:
         handled_dict["甘肃省"] += 1
@@ -123,13 +133,14 @@ def address_filter(line, handled_dict):
         handled_dict["青海省"] += 1
     elif "台湾" in line or "台北" in line or "高雄" in line or "台灣" in line or "新北" in line or "中和" in line \
             or "台中" in line or "永和" in line or "台南" in line or "嘉義" in line or "三重" in line or "新竹" in line \
-            or "新店" in line or "汐止" in line or "彰化" in line or "板橋" in line:
+            or "新店" in line or "汐止" in line or "彰化" in line or "板橋" in line or "桃園" in line or "樹林" in line \
+            or "屏東" in line or "鳳山" in line:
         handled_dict["台湾省"] += 1
     # 5自治区
-    elif "蒙古" in line or "呼和浩特" in line or "包头" in line or "内蒙" in line or "呼伦贝尔" in line:
+    elif "蒙古" in line or "呼和浩特" in line or "包头" in line or "内蒙" in line or "呼伦贝尔" in line or "满洲里" in line:
         handled_dict["内蒙古自治区"] += 1
     elif "广西" in line or "南宁" in line or "柳北" in line or "柳南" in line or "城中" in line or "兴宁" in line \
-            or "市宁" in line or "青秀" in line or "柳州" in line or "桂林" in line:
+            or "市宁" in line or "青秀" in line or "柳州" in line or "桂林" in line or "北流" in line:
         handled_dict["广西壮族自治区"] += 1
     elif "西藏" in line or "拉萨" in line:
         handled_dict["西藏自治区"] += 1
@@ -138,7 +149,7 @@ def address_filter(line, handled_dict):
     elif "新疆" in line or "乌鲁木齐" in line or "吐鲁番" in line or "博乐" in line:
         handled_dict["新疆维吾尔自治区"] += 1
     # 2特别行政区
-    elif "香港" in line or "HK" in line or "Hong Kong" in line or "HONGKONG" in line or "hong kong" in line:
+    elif "香港" in line or "HK" in line or "Hong Kong" in line or "HONGKONG" in line or "hong kong" in line or "HongKong" in line:
         handled_dict["香港特别行政区"] += 1
     elif "澳门" in line or "澳門" in line:
         handled_dict["澳门特别行政区"] += 1
@@ -151,7 +162,7 @@ def address_filter(line, handled_dict):
     elif "美国" in line or "USA" in line:
         handled_dict["美国"] += 1
     elif "日本" in line or "JPN" in line or "JAPAN" in line or "大阪" in line or "小樽" in line or "北海道" in line \
-            or "japan" in line or "Tokyo" in line:
+            or "japan" in line or "Tokyo" in line or "広島" in line:
         handled_dict["日本"] += 1
     elif "澳大利亚" in line or "AUS" in line:
         handled_dict["澳大利亚"] += 1
