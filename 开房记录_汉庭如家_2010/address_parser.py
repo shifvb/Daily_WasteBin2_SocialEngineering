@@ -50,7 +50,7 @@ def address_filter(line, handled_dict):
             or "海陵" in line or "靖江" in line:
         handled_dict["江苏省"] += 1
     elif "浙江" in line or "杭州" in line or "宁波" in line or "绍兴" in line or "江东" in line or "瑞安" in line \
-            or "越城" in line or "象山" in line or "温州" in line or "上城" in line or "吴兴" in line \
+            or "越城" in line or "象山" in line or "温州" in line or "上城" in line or "吴兴" in line or "萧山" in line \
             or "草塔" in line or "天台" in line or "宁海" in line or "慈溪" in line or "上虞" in line:
         handled_dict["浙江省"] += 1
     elif "安徽" in line or "黄山" in line or "合肥" in line or "鸠江" in line or "颖泉" in line or "迎江" in line or \
@@ -76,7 +76,7 @@ def address_filter(line, handled_dict):
             or "黄陂" in line or "孝南" in line:
         handled_dict["湖北省"] += 1
     elif "湖南" in line or "长沙" in line or "湖市省" in line or "湘潭" in line or "怀化" in line \
-            or "株洲" in line or "雨花" in line:
+            or "株洲" in line or "雨花" in line or "天心" in line:
         handled_dict["湖南省"] += 1
     elif "广东" in line or "广州" in line or "深圳" in line or "顺德" in line or "万江" in line or "萝岗" in line \
             or "凤岗" in line or "黄浦" in line or "南山" in line or "海珠" in line or "虎门" in line \
@@ -90,7 +90,7 @@ def address_filter(line, handled_dict):
         handled_dict["四川省"] += 1
     elif "贵州" in line or "南明" in line or "贵阳" in line or "贵呀" in line:
         handled_dict["贵州省"] += 1
-    elif "云南" in line or "云市省" in line:
+    elif "云南" in line or "云市省" in line or "昆明" in line:
         handled_dict["云南省"] += 1
     elif "陕西" in line or "西安" in line or "莲湖" in line or "秦都" in line or "碑林" in line or "耀州" in line:
         handled_dict["陕西省"] += 1
@@ -151,6 +151,16 @@ def address_filter(line, handled_dict):
         handled_dict["印度"] += 1
     elif "RUS" in line:
         handled_dict['俄罗斯'] += 1
+    elif "BLR" in line:
+        handled_dict["白俄罗斯"] += 1
+    elif "ITA" in line:
+        handled_dict["意大利"] += 1
+    elif "TUR" in line:
+        handled_dict["土耳其"] += 1
+    elif "MNG" in line:
+        handled_dict["蒙古"] += 1
+    elif "SAU" in line:
+        handled_dict["沙特阿拉伯"] += 1
     else:
         return False
     return True
@@ -217,6 +227,11 @@ def main():
         "挪威": 0,
         "印度": 0,
         "俄罗斯": 0,
+        "白俄罗斯": 0,
+        "意大利": 0,
+        "土耳其": 0,
+        "蒙古": 0,
+        "沙特阿拉伯": 0,
     }
     f_out = open(output_path, mode="w", encoding="utf8")
     with open(input_path, mode='r', encoding='utf8') as f:
