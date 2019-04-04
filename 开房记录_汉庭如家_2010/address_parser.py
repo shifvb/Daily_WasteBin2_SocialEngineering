@@ -2,6 +2,57 @@ import os
 import pprint
 
 
+class AddressFilterLevelOne(object):
+    def __init__(self):
+        """
+        第一级地址过滤器，去除一些没意义的字段
+        """
+        # define useless strings
+        self.black_list = (
+
+        )
+        self.black_list_len_2 = (
+            '  ', ' 0', '--', '..', '0.', '00', '10', '11', '14', '20', '23', '25', '77', '[O', '``', 'na', 'ne', 'qu',
+            '‘’', '“”', "待定", "bt", "sc", "辞了", "12", "21", "an", "01", "ss", "45", ".3", "s ", "SB", "qq", "F ",
+            "fs", "-\\", "//", "w ", "”“"
+        )
+
+        self.black_list_len_3 = (
+            '000', '001', '123', '142', '213', '222', '231', 'EEE', 'WU ', '‘’‘', '、..', "---", "sad", "   ", "111",
+            "952", "abc", "HG ", "yyy"
+        )
+        self.black_list_len_4 = (
+            '    ', '0000', '，，，，', "----", "0223", "2222", "没有地址", "1520"
+        )
+
+    def filter(self, address_str: str) -> bool:
+        """
+        传入输入字符串，进行过滤
+        :param address_str: 输入地址字符串
+        :return: 是否为有效地址
+        """
+        # 去除空格，全是空格的地址无效
+        address_str = address_str.strip(" ")
+        if not address_str:
+            return False
+
+        # 太短的就不要了
+        if len(address_str) <= 1:
+            return False
+
+        if address_str in self.black_list:
+            return False
+        elif len(address_str) == 2 and address_str in self.black_list_len_2:
+            return False
+        elif len(address_str) == 3 and address_str in self.black_list_len_3:
+            return False
+        elif len(address_str) == 4 and address_str in self.black_list_len_4:
+            return False
+
+        # 通过了前面的过滤，就是有效的
+        return True
+
+
 def address_filter(line, handled_dict):
     """
     Parse semi-identified address string to universal address string (category by region/province).
@@ -108,7 +159,7 @@ def address_filter(line, handled_dict):
             or "凤岗" in line or "黄浦" in line or "南山" in line or "海珠" in line or "虎门" in line or "韶关" in line \
             or "高埗" in line or "厚街" in line or "大朗" in line or "东莞" in line or "沙田" in line or "佛山" in line \
             or "黄埔" in line or "龙岗" in line or "荔湾" in line or "汕头" in line or "广 东" in line or "潮州" in line \
-            or "茂名" in line or "廣東" in line or "廣州" in line or "guangdong" in line or "惠州" in line or "清远" in line\
+            or "茂名" in line or "廣東" in line or "廣州" in line or "guangdong" in line or "惠州" in line or "清远" in line \
             or "中山" in line or "湛江" in line or "江门" in line or "東莞" in line or "Guangdong" in line or "肇庆" in line \
             or "肇庆" in line or "恩平" in line:
         handled_dict["广东省"] += 1
