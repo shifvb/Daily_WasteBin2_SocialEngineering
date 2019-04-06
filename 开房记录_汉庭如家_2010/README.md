@@ -134,7 +134,16 @@ see ./download/download.txt
         ![](md_img/duty_analysis.png)
 
 20. `Mobile`字段
+    1. 手机号码。出现频率为`7711882/20039768(38.483%)`
+    2. 去除无用数据，统计较多出现号段的频率：
     
+        ![](md_img/mobile_analysis_1.png)
+        
+    3. 当时，还真是移动的天下呢
+        
+        ![](md_img/mobile_analysis_2.png)
+    
+        
   
 , , \
 Tel, Fax, EMail, Nation, Taste, \
