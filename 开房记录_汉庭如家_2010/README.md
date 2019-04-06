@@ -93,12 +93,17 @@ see ./download/download.txt
 
 12. `District2`字段
     1. 所在国家/地区，出现频率为`17548292/20039768(87.567%)`
-    2. 各个国家/地区都有，但是CHN占绝大部分。取前10展示一下：
+    2. 各个国家/地区都有(ISO3166-1 alpha-3)，但是CHN占绝大部分。取前10展示一下：
     
         ![](md_img/district2_analysis.png)
-    
 
-, , District3, District4, District5, \
+13. `District3`字段
+    1. 纯2位数字，莫非是你。。。11区？出现频率为`17250593/20039768(86.082%)
+    2. 取前10多的字段类型统计一下：
+    
+        ![](md_img/district3_analysis.png)
+
+, , , District4, District5, \
 District6, FirstNm, LastNm, Duty, Mobile, \
 Tel, Fax, EMail, Nation, Taste, \
 Education, Company, CTel, CAddress, CZip, \
