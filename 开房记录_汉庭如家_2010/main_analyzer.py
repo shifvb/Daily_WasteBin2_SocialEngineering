@@ -1,6 +1,6 @@
 import os
 import sys
-from 开房记录_汉庭如家_2010.address_parser import AddressFilterLevelOne
+import datetime
 
 
 def reader(work_dir):
@@ -58,16 +58,16 @@ def main_analyzer(work_dir: str, output_path: str, enable_dict_collector=False):
             pass
 
         # 如果符合一定的条件，就把这个字段输出看看
-        col_to_analyze = col_District1
+        col_to_analyze = col_CtfTp
         if col_to_analyze:
-            print(col_to_analyze, file=f)
+            # print(col_to_analyze, file=f)
             line_counter += 1
-            dict_collector.collect(col_to_analyze)
+            dict_collector.collect(col_to_analyze.split(" ")[0])
 
     print(line_counter)
     # 按降序输出统计结果
     if enable_dict_collector is True:
-        for k, v in dict_collector.get_collection_result():
+        for k, v in dict_collector.get_collection_result()[:200]:
             print("{},{}".format(k, v))
 
     # 关闭打开的文件
@@ -129,5 +129,4 @@ def main():
 
 
 if __name__ == '__main__':
-    address_filter = AddressFilterLevelOne()
     main()
