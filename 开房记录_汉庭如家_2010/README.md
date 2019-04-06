@@ -142,11 +142,21 @@ see ./download/download.txt
     3. 当时，还真是移动的天下呢
         
         ![](md_img/mobile_analysis_2.png)
+
+21. `Tel`字段
+    1. 电话号码。出现频率为`5402887/20039768(26.961%)`
     
-        
+22. `Fax`字段
+    1. 传真。出现频率为`1017947/20039768(5.080%)`
+    
+23. `Email`字段
+    1. 电子邮件。出现频率为`2905672/20039768(14.500%)`
+    2. 去除无效数据，可以看到当时人们使用何种电子邮件服务：
+    
+        ![](md_img/email_analysis.png)
+            
   
-, , \
-Tel, Fax, EMail, Nation, Taste, \
+ , Nation, Taste, \
 Education, Company, CTel, CAddress, CZip, \
 Family, Version, id
 
