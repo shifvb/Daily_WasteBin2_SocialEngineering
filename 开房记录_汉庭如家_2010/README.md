@@ -91,11 +91,14 @@ see ./download/download.txt
     
         ![](md_img/district1_analysis.png)
 
-12. xxxxx
+12. `District2`字段
+    1. 所在国家/地区，出现频率为`17548292/20039768(87.567%)`
+    2. 各个国家/地区都有，但是CHN占绝大部分。取前10展示一下：
     
-    emmmm 
+        ![](md_img/district2_analysis.png)
+    
 
-, District2, District3, District4, District5, \
+, , District3, District4, District5, \
 District6, FirstNm, LastNm, Duty, Mobile, \
 Tel, Fax, EMail, Nation, Taste, \
 Education, Company, CTel, CAddress, CZip, \
