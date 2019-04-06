@@ -103,7 +103,15 @@ see ./download/download.txt
     
         ![](md_img/district3_analysis.png)
 
-, , , District4, District5, \
+14. `District4`字段
+    1. 6位数字居多，但也有4位数字，可能是邮编。出现频率为`16964662/20039768(84.655%)`
+    2. 取前10多的字段类型统计一下：
+    
+        ![](md_img/district4_analysis.png)
+    
+    
+
+, , , , District5, \
 District6, FirstNm, LastNm, Duty, Mobile, \
 Tel, Fax, EMail, Nation, Taste, \
 Education, Company, CTel, CAddress, CZip, \
