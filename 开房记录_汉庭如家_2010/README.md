@@ -115,7 +115,16 @@ see ./download/download.txt
 16. `District6`字段
     1. 不知道是什么意思。出现频率为`74/20039768(0.000%)`
 
-, FirstNm, LastNm, Duty, Mobile, \
+17. `FirstNm`字段
+    1. FirstName即你的名字。出现频率为`341495/20039768(1.704%)`
+    2. 去除无用数据，你们感受一下
+    
+        ![](md_img/firstnm_analysis.png)
+    
+    
+    
+    
+, , LastNm, Duty, Mobile, \
 Tel, Fax, EMail, Nation, Taste, \
 Education, Company, CTel, CAddress, CZip, \
 Family, Version, id
