@@ -1,4 +1,4 @@
-### 汉庭如家2000万条开房记录
+### 汉庭如家2000万条开房记录[\[1\]][1]
 
 ### Download
 
@@ -24,7 +24,7 @@ see ./download/download.txt
 
 4. `CtfTp`字段
     1. 估计是`CtfType`的缩写，出现频率为`20038723/20039768(99.995%)`。
-    3. 有多种类型：
+    2. 有多种类型：
         * `ID`，`18882852/20038723(94.232%)`，
         * `VSA`，`376856/20038723(1.881%)`，
         * `OTH`，`242052/20038723(1.208%)`，
@@ -55,37 +55,37 @@ see ./download/download.txt
     
 6.  `Gender`字段
     1. 此列为性别，出现频率为`19577629/20039768(97.694%)`。
-    3. 去除无效数据后，按性别统计(暂只有男/女)结果：
+    2. 去除无效数据后，按性别统计(暂只有男/女)结果：
     
         ![](md_img/gender_analysis.png)
         
 7. `Birthday`字段
     1. 此列为生日(其实从身份证号里也能得到)，出现频率为`19942796/20039768(99.516%)`
-    3. 去除无效及明显不合理数据后，按年计算生日分布：
+    2. 去除无效及明显不合理数据后，按年计算生日分布：
     
         ![](md_img/birthday_analysis.png)
         
 8. `Address`字段
     1. 似乎是。。。家庭住址？出现频率为`16641249/20039768(83.041%)`
-    3. 去除无效数据后，按地区/区域计算地址分布：
+    2. 去除无效数据后，按地区/区域计算地址分布：
     
         ![](md_img/address_map.jpg)
         
         ![](md_img/address.png)
-    
-    
+
+9. `Zip`字段
+    1. 大部分是中国大陆地区邮政编码。出现频率为`1702134/20039768(8.494%)`
+    2. 去除无效数据和中国大陆外地区后，按地区[\[2\]][2]计算邮政编码分布：
         
-        
-        
-        
-        
-        
-        
+        ![](md_img/zip_analysis.png)
+ 
+10. `Dirty`字段
 
 
-
-, , Zip, Dirty, \
-District1, District2, District3, District4, District5, \
+11. `District1`字段
+ 
+, \
+, District2, District3, District4, District5, \
 District6, FirstNm, LastNm, Duty, Mobile, \
 Tel, Fax, EMail, Nation, Taste, \
 Education, Company, CTel, CAddress, CZip, \
@@ -93,4 +93,6 @@ Family, Version, id
 
 ### References
 
-1. [https://blog.csdn.net/qq_36561697/article/details/82356106](https://blog.csdn.net/qq_36561697/article/details/82356106)
+[1]: https://blog.csdn.net/qq_36561697/article/details/82356106 
+
+[2]: https://zhidao.baidu.com/question/200103085.html

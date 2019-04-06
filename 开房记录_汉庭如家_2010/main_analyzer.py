@@ -26,7 +26,7 @@ def reader(work_dir):
         f.close()
 
 
-def address_parser_level_1(work_dir: str, output_path: str, enable_dict_collector=False):
+def main_analyzer(work_dir: str, output_path: str, enable_dict_collector=False):
     """
     :return:
     """
@@ -37,7 +37,9 @@ def address_parser_level_1(work_dir: str, output_path: str, enable_dict_collecto
         dict_collector = DictCollector()
 
     for line_num, line in enumerate(reader(work_dir)):
-        # if not i % 17237 == 0:
+
+        # 用来稀疏输入的
+        # if not line_num % 17237 == 0:
         #     continue
 
         try:
@@ -48,19 +50,23 @@ def address_parser_level_1(work_dir: str, output_path: str, enable_dict_collecto
             col_Tel, col_Fax, col_EMail, col_Nation, col_Taste, \
             col_Education, col_Company, col_CTel, col_CAddress, col_CZip, \
             col_Family, col_Version, col_id = line.split(",")
-        except ValueError as err:
+        except ValueError:
             # print("row_{}, {}, {}".format(i, len(line.split(",")), line), file=sys.stderr)
             continue
         else:
             # print("row_{}, {}".format(i, line))
             pass
 
-        if address_filter.filter(col_Address) is True:
-            print(col_Address, file=f)
-
-            # global_counter += 1
+        # 如果符合一定的条件，就把这个字段输出看看
+        col_to_analyze = col_Zip
+        if col_to_analyze:
+            print(col_to_analyze, file=f)
+            line_counter += 1
+            dict_collector.collect(col_to_analyze)
 
     print(line_counter)
+    if enable_dict_collector is True:
+        print(dict_collector.get_collection_result())
     f.close()
 
 
@@ -113,7 +119,7 @@ class DictCollector(InformationCollector):
 
 
 def main():
-    address_parser_level_1(work_dir=r"D:\2000W", output_path=r"d:\\address_2.txt", enable_dict_collector=False)
+    main_analyzer(work_dir=r"D:\2000W", output_path=r"d:\\analyzer_out.txt", enable_dict_collector=True)
 
 
 if __name__ == '__main__':
