@@ -86,8 +86,10 @@ see ./download/download.txt
         ![](md_img/dirty_analysis.png)
 
 11. `District1`字段
+    1. 所在大洲，出现频率为`761491/20039768(3.800%)`
+    2. 亚洲人占绝对优势,不过CHN是啥意思。。。分布：
     
-    emmmm
+        ![](md_img/district1_analysis.png)
 
 12. xxxxx
     

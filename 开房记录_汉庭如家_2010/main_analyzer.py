@@ -58,15 +58,19 @@ def main_analyzer(work_dir: str, output_path: str, enable_dict_collector=False):
             pass
 
         # 如果符合一定的条件，就把这个字段输出看看
-        col_to_analyze = col_Zip
+        col_to_analyze = col_District1
         if col_to_analyze:
             print(col_to_analyze, file=f)
             line_counter += 1
             dict_collector.collect(col_to_analyze)
 
     print(line_counter)
+    # 按降序输出统计结果
     if enable_dict_collector is True:
-        print(dict_collector.get_collection_result())
+        for k, v in dict_collector.get_collection_result():
+            print("{},{}".format(k, v))
+
+    # 关闭打开的文件
     f.close()
 
 
@@ -110,12 +114,14 @@ class DictCollector(InformationCollector):
         """
         del self._info_dict
 
-    def get_collection_result(self):
+    def get_collection_result(self) -> list:
         """
         返回收集器的当前计数结果
         :return:
         """
-        return str(self._info_dict)
+        _list_counter = [(k, v) for k, v in self._info_dict.items()]
+        _list_counter.sort(key=lambda _: _[1], reverse=True)
+        return _list_counter
 
 
 def main():
