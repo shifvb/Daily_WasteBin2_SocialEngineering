@@ -120,11 +120,14 @@ see ./download/download.txt
     2. 去除无用数据，你们感受一下
     
         ![](md_img/firstnm_analysis.png)
+
+18. `LastNm`字段
+    1. LastName即你的姓，不过似乎而变成了名字。出现频率为`993016/20039768(4.955%)`
+    2. 去除无用数据，统计出现频率前10的名字。。。又是你，王伟！
     
+        ![](md_img/lastnm_analysis.png)
     
-    
-    
-, , LastNm, Duty, Mobile, \
+Duty, Mobile, \
 Tel, Fax, EMail, Nation, Taste, \
 Education, Company, CTel, CAddress, CZip, \
 Family, Version, id
