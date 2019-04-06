@@ -80,11 +80,19 @@ see ./download/download.txt
         ![](md_img/zip_analysis.png)
  
 10. `Dirty`字段
-
+    1. 不知道啥意思。。。出现频率为`18173499/20039768(90.687%)`
+    2. 少部分是一个空格，剩下都是大写字母F（双引号包括部分）。分布：
+    
+        ![](md_img/dirty_analysis.png)
 
 11. `District1`字段
- 
-, \
+    
+    emmmm
+
+12. xxxxx
+    
+    emmmm 
+
 , District2, District3, District4, District5, \
 District6, FirstNm, LastNm, Duty, Mobile, \
 Tel, Fax, EMail, Nation, Taste, \
