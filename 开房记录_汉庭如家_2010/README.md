@@ -1,10 +1,23 @@
 ### 汉庭如家2000万条开房记录[\[1\]][1]
 
-### Download
+### 0. Abstract
 
-see ./download/download.txt
+本文档记录了笔者对此纪录的统计结果
 
-### ParseResult
+### 1. Background
+
+这个数据集在网上容易找到，意义上也不错，就拿这个练手吧。
+
+### 2. Method
+
+读取数据文件，用计数器进行分析。具体实现的话，用管道架构，
+一层一层对数据清洗，最后统计并用excel之类的工具画图。
+
+### 3. Data
+
+文件下载方式在download文件夹中给出，本文使用csv文件而不是bak的那个。
+
+### 4. Experiment and Result
 
 一共`20051428`行，不过似乎有`11660`行的数据不太规范，其实里面还是有信息的。
 方便起见，这11660行数据不予考虑，即被清洗掉。
@@ -32,9 +45,8 @@ see ./download/download.txt
         * `VSA`，`376856/20038723(1.881%)`，
      
 5. `CtfId`字段
-    1. 
-    2. 数据分布稠密，出现频率为`20039758/20039768(99.999%)`。
-    
+    1. 不明意义字段。出现频率为`20039758/20039768(100.000%)`
+
 6.  `Gender`字段
     1. 此列为性别，出现频率为`19577629/20039768(97.694%)`。
     2. 去除无效数据后，按性别统计(暂只有男/女)结果：
@@ -173,8 +185,19 @@ see ./download/download.txt
 33. `id`字段
     1. 估计是auto increment的ID。出现频率为`20039769/20039768(100.00%)`
 
+### 5. Conclusion
+
+这些统计结果中唯一有用的或许是身份证和姓名的对应关系。但是其它数据库应该都有这个
+
+emmmm...
+
+所以上面的统计结果只能看看而已
+
 ### References
 
-[1]: https://blog.csdn.net/qq_36561697/article/details/82356106 
+\[1\] https://blog.csdn.net/qq_36561697/article/details/82356106 
 
+\[2\] https://zhidao.baidu.com/question/200103085.html
+
+[1]: https://blog.csdn.net/qq_36561697/article/details/82356106 
 [2]: https://zhidao.baidu.com/question/200103085.html
