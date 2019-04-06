@@ -126,8 +126,17 @@ see ./download/download.txt
     2. 去除无用数据，统计出现频率前10的名字。。。又是你，王伟！
     
         ![](md_img/lastnm_analysis.png)
+
+19. `Duty`字段
+    1. 你的职业。出现频率为`338042/20039768(1.687%)`
+    2. 去除无用数据，统计出现频率前10的职业类型：
+        
+        ![](md_img/duty_analysis.png)
+
+20. `Mobile`字段
     
-Duty, Mobile, \
+  
+, , \
 Tel, Fax, EMail, Nation, Taste, \
 Education, Company, CTel, CAddress, CZip, \
 Family, Version, id
