@@ -109,10 +109,13 @@ see ./download/download.txt
     
         ![](md_img/district4_analysis.png)
     
+15. `District5`字段
+    1. 城市，出现频率为`724/20039768(0.004%)`
     
+16. `District6`字段
+    1. 不知道是什么意思。出现频率为`74/20039768(0.000%)`
 
-, , , , District5, \
-District6, FirstNm, LastNm, Duty, Mobile, \
+, FirstNm, LastNm, Duty, Mobile, \
 Tel, Fax, EMail, Nation, Taste, \
 Education, Company, CTel, CAddress, CZip, \
 Family, Version, id
